@@ -5,7 +5,6 @@ import axios from "axios";
 import { toast } from "sonner";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Loader2Icon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -20,17 +19,10 @@ import {
   Form,
   FormItem,
   FormField,
-  FormLabel,
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Field,
-  FieldLabel,
-  FieldGroup,
-  FieldSeparator,
-  FieldDescription,
-} from "@/components/ui/field";
+import { Field, FieldLabel, FieldGroup } from "@/components/ui/field";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

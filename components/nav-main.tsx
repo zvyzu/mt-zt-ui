@@ -1,15 +1,19 @@
 "use client";
 
-import { IconCirclePlusFilled, IconDevicesPlus, type Icon } from "@tabler/icons-react";
-
-import { Button } from "@/components/ui/button";
 import {
-  SidebarGroup,
-  SidebarGroupContent,
+  type Icon,
+  IconDevicesPlus,
+  IconCirclePlusFilled,
+} from "@tabler/icons-react";
+
+import {
   SidebarMenu,
-  SidebarMenuButton,
+  SidebarGroup,
   SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupContent,
 } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
 
 export function NavMain({
   items,
@@ -32,7 +36,11 @@ export function NavMain({
               <IconCirclePlusFilled />
               <span>Quick Create</span>
             </SidebarMenuButton>
-            <Button size="icon" className="size-8 group-data-[collapsible=icon]:opacity-0" variant="outline">
+            <Button
+              size="icon"
+              className="size-8 group-data-[collapsible=icon]:opacity-0"
+              variant="outline"
+            >
               <IconDevicesPlus />
               <span className="sr-only">Inbox</span>
             </Button>
