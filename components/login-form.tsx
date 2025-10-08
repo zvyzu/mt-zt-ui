@@ -58,7 +58,7 @@ export function LoginForm({
     sessionStorage.setItem("auth", btoa(`${values.user}:${values.password}`));
     // axios.defaults.headers.common["Authorization"] = `Basic ${auth}`;
     axios
-      .get("https://zt.zvy.me/rest/system/resource", {
+      .get(`${process.env.NEXT_PUBLIC_API_BASE || ""}/rest/system/resource`, {
         auth: {
           username: values.user,
           password: values.password,
@@ -77,7 +77,6 @@ export function LoginForm({
         );
         setLoading(false);
       });
-    setLoading(false);
   };
 
   const onReset = () => {
